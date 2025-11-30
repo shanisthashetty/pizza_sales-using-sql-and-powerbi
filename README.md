@@ -1,49 +1,12 @@
-A complete end-to-end analytics project designed to explore pizza sales performance, identify trends, evaluate KPIs, and uncover insights using SQL and Power BI.
-This project demonstrates your ability to work with data extraction, transformation, visualization, and business intelligence.
-
+<p>A complete end-to-end analytics project designed to explore pizza sales performance, identify trends, evaluate KPIs, and uncover insights using <b>SQL</b> and <b>Power BI</b>. This project demonstrates your ability to work with data extraction, transformation, visualization, and business intelligence.</p> <br>
 🚀 Project Highlights
-
-📌 KPI-driven dashboard
-
-📈 Trend analysis (daily, monthly)
-
-🧮 SQL for aggregation, ranking & performance metrics
-
-📊 Power BI interactive visualizations
-
-🏆 Best & Worst selling pizzas
-
-🎯 Category & size contribution analysis
-
+<ul> <li>📌 KPI-driven dashboard</li> <li>📈 Trend analysis (daily, monthly)</li> <li>🧮 SQL for aggregation, ranking & performance metrics</li> <li>📊 Power BI interactive visualizations</li> <li>🏆 Best & Worst selling pizzas</li> <li>🎯 Category & size contribution analysis</li> </ul> <br>
 🗂️ Project Files
-File	Description
-pizza_sales.csv	Raw dataset
-pizza project.pbix	Power BI dashboard
-pizza sql Document.rtf	SQL queries (KPIs, trends, performance analysis)
-README.md	Documentation
+<table> <tr><th>File</th><th>Description</th></tr> <tr><td>pizza_sales.csv</td><td>Raw dataset</td></tr> <tr><td>pizza project.pbix</td><td>Power BI dashboard</td></tr> <tr><td>pizza sql Document.rtf</td><td>SQL queries (KPIs, trends, performance analysis)</td></tr> <tr><td>README.md</td><td>Documentation</td></tr> </table> <br>
 🎯 Business Problem
-
-The restaurant wants to understand:
-
-How much revenue is being generated?
-
-Which pizzas are performing the best?
-
-What sizes or categories are most profitable?
-
-What are the daily & monthly sales patterns?
-
-How many pizzas are sold per order on average?
-
-These insights help improve marketing, inventory, menu design, and operational decisions.
-
+<p>The restaurant wants to understand:</p> <ul> <li>💰 How much revenue is being generated?</li> <li>🍕 Which pizzas are performing the best?</li> <li>📦 What sizes or categories are most profitable?</li> <li>📅 What are the daily & monthly sales patterns?</li> <li>➗ How many pizzas are sold per order on average?</li> </ul> <p>These insights help improve marketing, inventory, menu design, and operational decisions.</p> <br>
 📊 Key Performance Indicators (KPIs)
-KPI	Icon	Description
-Total Revenue	💰	Total earnings from all pizza sales
-Average Order Value (AOV)	🧾	Revenue per order
-Total Pizzas Sold	🍕	Total quantity sold
-Total Orders	📦	Unique orders placed
-Avg. Pizzas per Order	➗	Ratio of quantity sold to number of orders
+<table> <tr><th>KPI</th><th>Icon</th><th>Description</th></tr> <tr><td>Total Revenue</td><td>💰</td><td>Total earnings from all pizza sales</td></tr> <tr><td>Average Order Value (AOV)</td><td>🧾</td><td>Revenue per order</td></tr> <tr><td>Total Pizzas Sold</td><td>🍕</td><td>Total quantity sold</td></tr> <tr><td>Total Orders</td><td>📦</td><td>Unique orders placed</td></tr> <tr><td>Avg. Pizzas per Order</td><td>➗</td><td>Quantity sold / total orders</td></tr> </table> <br>
 🧠 SQL Analysis
 🔧 KPI Queries
 SELECT SUM(total_price) AS total_revenue FROM pizza_sales;
@@ -61,6 +24,7 @@ SELECT
   AS DECIMAL(10,2)) AS average_pizza_per_order
 FROM pizza_sales;
 
+<br>
 📆 Trend Analysis
 🔸 Daily Orders
 SELECT DATENAME(dw, order_date) AS order_day,
@@ -75,6 +39,7 @@ FROM pizza_sales
 GROUP BY DATENAME(month, order_date)
 ORDER BY total_order DESC;
 
+<br>
 🧩 Category & Size Contribution
 SELECT pizza_category,
        SUM(total_price) * 100 / (SELECT SUM(total_price) FROM pizza_sales) AS pct
@@ -88,6 +53,7 @@ FROM pizza_sales
 GROUP BY pizza_size
 ORDER BY pct DESC;
 
+<br>
 🏆 Best & Worst Sellers
 🔝 Top 5 (Revenue / Quantity / Orders)
 SELECT TOP 5 pizza_name, SUM(total_price) AS total_revenue
@@ -101,57 +67,13 @@ FROM pizza_sales
 GROUP BY pizza_name
 ORDER BY total_revenue ASC;
 
+<br>
 📊 Power BI Dashboard Overview
 🔹 Visuals Built:
-
-🟦 Daily Sales Trend (Bar Chart)
-
-📉 Monthly Sales Trend (Line Chart)
-
-🥧 % Sales by Category (Pie Chart)
-
-🥧 % Sales by Size (Pie Chart)
-
-🔺 Best Sellers (Revenue, Quantity, Orders)
-
-🔻 Worst Sellers (Revenue, Quantity, Orders)
-
-🎯 Quantity Sold by Category (Funnel Chart)
-
-🖼️ Optional: Add dashboard screenshots for more impact!
+<ul> <li>🟦 Daily Sales Trend (Bar Chart)</li> <li>📉 Monthly Sales Trend (Line Chart)</li> <li>🥧 % Sales by Category (Pie Chart)</li> <li>🥧 % Sales by Size (Pie Chart)</li> <li>🔺 Best Sellers (Revenue, Quantity, Orders)</li> <li>🔻 Worst Sellers (Revenue, Quantity, Orders)</li> <li>🎯 Quantity Sold by Category (Funnel Chart)</li> </ul> <br>
 🛠 Tools & Technologies
-Category	Tools
-Database / Querying	SQL Server
-Visualization	Power BI
-Data Analysis	SQL Aggregations, Joins, Date Functions
-File Formats	CSV, PBIX, RTF
-Skills Demonstrated	KPI design, trend analysis, ranking, BI reporting
+<table> <tr><th>Category</th><th>Tools</th></tr> <tr><td>Database / Querying</td><td>SQL Server</td></tr> <tr><td>Visualization</td><td>Power BI</td></tr> <tr><td>Data Analysis</td><td>SQL Aggregations, Joins, Date Functions</td></tr> <tr><td>File Formats</td><td>CSV, PBIX, RTF</td></tr> <tr><td>Skills Demonstrated</td><td>KPI design, BI reporting, trend analysis</td></tr> </table> <br>
 📌 Key Insights
-
-Revenue is driven by specific high-performing pizzas
-
-Large size pizzas contribute highest revenue
-
-Friday/Saturday show peak order volumes
-
-Supreme & Deluxe pizzas dominate performance
-
-Some categories underperform consistently
-
-Summer months show highest activity
-
+<ul> <li>💰 Revenue is driven by specific high-performing pizzas</li> <li>🍕 Large size pizzas contribute the highest revenue</li> <li>📅 Friday and Saturday show peak order volumes</li> <li>🏆 Supreme & Deluxe pizzas dominate performance</li> <li>⚠️ Some categories underperform consistently</li> <li>🌞 Summer months show highest activity</li> </ul> <br>
 🏁 Conclusion
-
-This project demonstrates your ability to perform:
-
-✔ SQL-based business analysis
-
-✔ KPI calculation
-
-✔ Trend identification
-
-✔ Power BI dashboard creation
-
-✔ Data storytelling
-
-A strong example of Business Intelligence & Analytics for real-world retail/restaurant data.
+<p>This project demonstrates your ability to perform:</p> <ul> <li>✔ SQL-based business analysis</li> <li>✔ KPI calculation</li> <li>✔ Trend identification</li> <li>✔ Power BI dashboard creation</li> <li>✔ Data storytelling</li> </ul> <p>A strong example of <b>Business Intelligence & Analytics</b> for real-world retail/restaurant data.</p>
